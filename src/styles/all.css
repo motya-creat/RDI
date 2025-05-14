@@ -1,0 +1,16 @@
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+
+.lh-normal {
+    line-height: 25px;
+}
+.bg-gray {
+    color: #4b5563;
+}
+.bg-white {
+    background-color: #FFFAFA;
+}

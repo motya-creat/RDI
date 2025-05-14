@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/styles/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class='header'>
+        <div class="header__content__left df">
+            <i class="fas fa-oil-can text-blue-500 text-2xl"></i><span>RDI</span>
+        </div>
+        <div class="header__right__content df">
+            <button id="openBtn" class="btn">Оставить заявку</button>
+        </div>
+    </header>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="closeBtn" onClick={closePopup}>×</span>
+            <div class="container">
+                <h1>Свяжитесь с нами</h1>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Ваш телефон</label>
+                        <input type="text" id="number" name="number" placeholder="+7 (888)-888-88-88" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group al-items df">
+                        <label for="message">Принять <a href="">пользовательское соглашение</a> <input type="checkbox" id="agreement" name="agreement" required></label>
+                    </div>
+                    <button type="submit" class="submit__button">Отправить</button>
+                </form>
+                <div id="successMessage" class="success-message">Спасибо! Ваше сообщение отправлено.</div>
+                <div id="errorMessage" class="error-message">Произошла ошибка при отправке. Пожалуйста, попробуйте
+                    позже.</div>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="section__head">
+            <div class="section__head__content">
+                <p class="head__content__title">Профессиональные дизельные решения</p>
+                <p class="head__content__bottom">Лидер в производстве и поставке дизельных агрегатов и комплектующих</p>
+                <div class="head__content__btn">
+                    <a href="#products__section" class="content__left__btn">Наша продукция</a>
+                    <a href="#" class="content__right__btn">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about__section section df" id="about__section">
+        <div class="section__content df">
+            <div class="title__content">
+                <h1 class="title__about">О компании RDI</h1>
+                <hr class="title__hr">
+            </div>
+            <div class="main__bottom__content df">
+                <div class="bottom__content__left df">
+                    <img src="./image/icon/icon.jpg" alt=""
+                        style="width: 100%; height: 100%; border-radius: 25px; object-fit: cover; ">
+                </div>
+                <div class="bottom__content__right df">
+                    <h3 class="fw-500" style="font-size: 1.5rem; height: 1px;">Наш опыт — ваша надежность</h3>
+                    <p class="fw-500 bg-gray lh-normal">Компания RDI уже более 15 лет является лидером в производстве и
+                        поставке дизельных агрегатов, топливной аппаратуры и комплектующих для промышленного и
+                        коммерческого транспорта.</p>
+                    <p class="fw-500 bg-gray lh-normal">Мы сочетаем передовые технологии с многолетним опытом, чтобы
+                        предложить нашим клиентам решения, которые действительно работают.</p>
+                    <div class="right__content__check df">
+                        <div class="left__check df">
+                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                <span class="fw-500 bg-gray">Гарантия качества</span>
+                            </div>
+                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                <span class="fw-500 bg-gray">Собственное производство</span>
+                            </div>
+                        </div>
+                        <div class="right__check df">
+                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i><span
+                                    class="fw-500 bg-gray">Сертифицированная продукция</span></div>
+                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i><span
+                                    class="fw-500 bg-gray">Техническая поддержка</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__product df bg-white" id="products__section">
+        <div class="section__content df">
+            <div class="title__content">
+                <h1 class="title__about">Наша продукция</h1>
+                <hr class="title__hr">
+            </div>
+            <div class="main__bottom__content df">
+                <div class="product__card df">
+                    <div class="card__image df">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="LOGO">
+                    </div>
+                    <div class="card__title">
+                        <h3 class="fw-500" style="font-size: 1rem; height: 1px;">Наш опыт — ваша надежность</h3>
+                        <a href="#">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./src/scripts/script.js"></script>
+</body>
+
+</html>
