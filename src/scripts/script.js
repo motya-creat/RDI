@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value
         const agree = document.getElementById('agreement').value
 
-        const botToken = '7770363402:AAHiPD7ZMCYRQ91VW_7vmiAHaRJ8N1U_vzA';
-        const chatId = '991387497';
-        // const botToken = process.env.BOT_TOKEN
-        // const chat_id = process.env.CHAT_ID
+        // const botToken = '7770363402:AAHiPD7ZMCYRQ91VW_7vmiAHaRJ8N1U_vzA';
+        // const chatId = '991387497';
+        const botToken = process.env.BOT_TOKEN
+        const chatId = process.env.CHAT_ID
 
 
         const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
