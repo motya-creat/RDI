@@ -292,6 +292,7 @@ textarea {
 .head__content__btn {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -357,7 +358,7 @@ button:hover {
 .right__content__check {
     gap: 20px;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
 .left__check {
@@ -483,5 +484,13 @@ button:hover {
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+    @media (max-width: 361px) {
+        .head__content__title {
+        font-size: 1.4rem;
+        }
+        .head__content__bottom {
+            font-size: .9rem;
+        }
     }
 }

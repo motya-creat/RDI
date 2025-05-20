@@ -20,7 +20,6 @@ window.addEventListener('click', function (event) {
     }
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.getElementById('contactForm');
@@ -36,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value
         const agree = document.getElementById('agreement').value
 
-        // const botToken = '7770363402:AAHiPD7ZMCYRQ91VW_7vmiAHaRJ8N1U_vzA';
-        // const chatId = '991387497';
         const botToken = process.env.BOT_TOKEN
         const chatId = process.env.CHAT_ID
 
