@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const botToken = process.env.BOT_TOKEN
         const chatId = process.env.CHAT_ID
 
-
         const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
         const text = `Имя: ${name}\nEmail: ${email}\nТелефон: ${number}\nСообщение: ${message}\nПольз.соглашение: ${agree}`;
 

@@ -18,3 +18,10 @@
     color: #4a81d4;
     text-decoration: none;
 }
+.marker {
+    border:1.5rem solid #dbeafe;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #2863eb;
+    background-color:  #dbeafe;
+}
