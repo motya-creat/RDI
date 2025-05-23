@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -36,7 +37,7 @@ body {
 }
 
 .section {
-    margin: 63px 0 0 0;
+    margin: 62px 0 0 0;
 }
 
 .header__content__left {
@@ -69,9 +70,8 @@ body {
 }
 
 .btn:hover {
-    transition: .7s;
-    background-color: #ffffff;
-    color: #090925;
+    transition: .5s;
+    color: #3460c0;
     cursor: pointer;
 }
 
@@ -110,7 +110,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     font-size: 2rem;
-    margin: 50px 0 0 0 ;
+    margin: 50px 0 0 0;
 }
 
 .closeBtn:hover,
@@ -174,9 +174,10 @@ input[type="checkbox"]:hover {
     border-radius: 1rem;
     padding: 1rem;
 }
+
 .submit__button:hover {
-    transition:  .7s;
-    background-color: #acacac ;
+    transition: .7s;
+    background-color: #acacac;
 }
 
 .df {
@@ -256,7 +257,6 @@ textarea {
     flex-wrap: wrap;
     gap: 1rem;
     text-align: center;
-
 }
 
 .head__content__bottom {
@@ -319,10 +319,14 @@ button:hover {
 }
 
 .section__content {
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 5rem 1rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.title__content {
+    margin: 0 0 40px 0;
 }
 
 .title__about {
@@ -334,7 +338,6 @@ button:hover {
     margin: 20px;
     justify-content: center;
     gap: 40px;
-    /* flex-wrap: wrap; */
 }
 
 .bottom__content__left {
@@ -415,6 +418,7 @@ button:hover {
     width: 100%;
     height: 200px;
 }
+
 .card__image img {
     border-radius: 25px 25px 0 0;
     width: 100%;
@@ -424,12 +428,12 @@ button:hover {
 
 .card__title {
     padding: 0 1rem 1.4rem 1.4rem;
-    gap: 10px;   
+    gap: 10px;
     flex-direction: column;
 }
 
 .bottom__btn__product {
-    margin: 2rem 0 0 0 ;
+    margin: 2rem 0 0 0;
     justify-content: center;
 }
 
@@ -459,6 +463,7 @@ button:hover {
     flex-direction: row;
     width: 100%;
 }
+
 .services__content {
     margin: 1rem 0 0 0;
     flex-direction: row;
@@ -496,10 +501,104 @@ button:hover {
 }
 
 /* END SECTION SERVICES */
-@media (max-width: 1517px){
-    .product__card {
+
+.card__reviews {
+    height: 150px;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.card__reviews:hover {
+    transform: translateY(-5px);
+    border-bottom: 5px solid #b3b3b3;
+}
+.card__content {
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.card__content__top {
+    gap: 20px;
+}
+
+.card__content__bottom {
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+}
+
+.about__user{
+    align-items: start;
+    text-align: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.image__user {
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #dbeafe;
+}
+
+/* FOOTER */
+
+.footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #192847;
+    color: #c0c0c0;
+}
+
+.footer__content {
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 1.2rem;
     width: 100%;
 }
+
+.left__content {
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+}
+
+.logo__content {
+    gap: 10px;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #FFFAFA;
+    flex-wrap: wrap;
+}
+
+.right__content {
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #c0c0c0;
+    font-size: 1rem;
+}
+
+/* END FOOTER */
+
+@media (max-width: 1517px) {
+    .product__card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 690px) {
+    .logo__content {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media (max-width: 679px) {
@@ -530,14 +629,17 @@ button:hover {
         align-items: center;
         width: 100%;
     }
+
     @media (max-width: 361px) {
         .head__content__title {
-        font-size: 1.4rem;
+            font-size: 1.4rem;
         }
+
         .head__content__bottom {
             font-size: .9rem;
         }
     }
+
     @media (max-width: 420px) {
         .services__card {
             width: 80%;

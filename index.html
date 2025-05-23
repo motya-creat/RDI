@@ -7,201 +7,262 @@
     <link rel="stylesheet" href="./src/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./src/styles/all.css">
-    <title>RDI - </title>
+    <title>RDI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/components/swiper/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <header class='header'>
-        <div class="header__content__left df">
-            <i class="fas fa-oil-can text-blue-500 text-2xl"></i><span>RDI</span>
-        </div>
-        <div class="header__right__content df">
-            <button id="openBtn" class="btn">Оставить заявку</button>
-        </div>
-    </header>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="closeBtn" onClick={closePopup}>×</span>
-            <div class="container">
-                <h1>Свяжитесь с нами</h1>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="number">Ваш телефон</label>
-                        <input type="text" id="number" name="number" placeholder="+7 (888)-888-88-88" maxlength="16" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Сообщение:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <div class="form-group al-items df">
-                        <label for="message">Принять <a href="">пользовательское соглашение</a> <input type="checkbox" id="agreement" name="agreement" required></label>
-                    </div>
-                    <button type="submit" class="submit__button">Отправить</button>
-                </form>
-                <div id="successMessage" class="success-message">Спасибо! Ваше сообщение отправлено.</div>
-                <div id="errorMessage" class="error-message">Произошла ошибка при отправке. Пожалуйста, попробуйте
-                    позже.</div>
+    <div class="root">
+        <header class='header'>
+            <div class="header__content__left df">
+                <i class="fas fa-oil-can text-blue-500 text-2xl"></i><span>RDI</span>
+            </div>
+            <div class="header__right__content df">
+                <button id="openBtn" class="btn">Оставить заявку</button>
+            </div>
+        </header>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="closeBtn" onClick={closePopup}>×</span>
+                <div class="container">
+                    <h1>Свяжитесь с нами</h1>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Имя:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Ваш телефон</label>
+                            <input type="text" id="number" name="number" placeholder="+7 (888)-888-88-88" maxlength="16"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group al-items df">
+                            <label for="message">Принять <a href="">пользовательское соглашение</a> <input
+                                    type="checkbox" id="agreement" name="agreement" required></label>
+                        </div>
+                        <button type="submit" class="submit__button">Отправить</button>
+                    </form>
+                    <div id="successMessage" class="success-message">Спасибо! Ваше сообщение отправлено.</div>
+                    <div id="errorMessage" class="error-message">Произошла ошибка при отправке. Пожалуйста, попробуйте
+                        позже.</div>
+                </div>
             </div>
         </div>
+        <section class="section">
+            <div class="section__head">
+                <div class="section__head__content">
+                    <p class="head__content__title">Профессиональные дизельные решения</p>
+                    <p class="head__content__bottom">Лидер в производстве и поставке дизельных агрегатов и комплектующих
+                    </p>
+                    <div class="head__content__btn">
+                        <a href="#products__section" class="content__left__btn">Наша продукция</a>
+                        <a href="#" class="content__right__btn">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about__section section df" id="about__section">
+            <div class="section__content df">
+                <div class="title__content">
+                    <h1 class="title__about">О компании RDI</h1>
+                    <hr class="title__hr">
+                </div>
+                <div class="main__bottom__content df">
+                    <div class="bottom__content__left df">
+                        <img src="./image/icon/icon.jpg" alt=""
+                            style="width: 100%; height: 100%; border-radius: 25px; object-fit: cover; ">
+                    </div>
+                    <div class="bottom__content__right df">
+                        <h3 class="fw-500" style="font-size: 1.5rem; height: 20px;">Наш опыт — ваша надежность</h3>
+                        <p class="fw-500 bg-gray lh-normal">Компания RDI уже более 15 лет является лидером в
+                            производстве и
+                            поставке дизельных агрегатов, топливной аппаратуры и комплектующих для промышленного и
+                            коммерческого транспорта.</p>
+                        <p class="fw-500 bg-gray lh-normal">Мы сочетаем передовые технологии с многолетним опытом, чтобы
+                            предложить нашим клиентам решения, которые действительно работают.</p>
+                        <div class="right__content__check df">
+                            <div class="left__check df">
+                                <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                    <span class="fw-500 bg-gray">Гарантия качества</span>
+                                </div>
+                                <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                    <span class="fw-500 bg-gray">Собственное производство</span>
+                                </div>
+                            </div>
+                            <div class="right__check df">
+                                <div class="check df">
+                                    <i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                    <span class="fw-500 bg-gray">Сертифицированная продукция</span>
+                                </div>
+                                <div class="check df">
+                                    <i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
+                                    <span class="fw-500 bg-gray">Техническая поддержка</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__product df bg-white" id="products__section">
+            <div class="section__content df">
+                <div class="title__content">
+                    <h1 class="title__about">Наша продукция</h1>
+                    <hr class="title__hr">
+                </div>
+                <div class="main__bottom__content df">
+                    <div class="product__card df">
+                        <div class="card__image df">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="LOGO">
+                        </div>
+                        <div class="card__title df">
+                            <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
+                            <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей
+                                применения.
+                            </p>
+                            <a href="#" class="link">Подробнее →</a>
+                        </div>
+                    </div>
+                    <div class="product__card df">
+                        <div class="card__image df">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="LOGO">
+                        </div>
+                        <div class="card__title df">
+                            <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
+                            <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей
+                                применения.
+                            </p>
+                            <a href="#" class="link">Подробнее →</a>
+                        </div>
+                    </div>
+                    <div class="product__card df">
+                        <div class="card__image df">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                alt="LOGO">
+                        </div>
+                        <div class="card__title df">
+                            <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
+                            <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей
+                                применения.
+                            </p>
+                            <a href="#" class="link">Подробнее →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom__btn__product df">
+                    <form action="#">
+                        <button class="btn__product">Смотреть весь каталог</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="services df" id="services">
+            <div class="section__content df">
+                <div class="title__content">
+                    <h1 class="title__about">Наши услуги</h1>
+                    <hr class="title__hr">
+                </div>
+                <div class="services__content df">
+                    <div class="services__card df">
+                        <div class="services__card__logo df">
+                            <i class="fas fa-tools text-blue-600 text-2xl marker"></i>
+                        </div>
+                        <div class="services__card__content df">
+                            <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;">Ремонт и обслуживание</h3>
+                            <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Профессиональный
+                                ремонт
+                                дизельных двигателей любой сложности.</p>
+                        </div>
+                    </div>
+                    <div class="services__card df">
+                        <div class="services__card__logo df">
+                            <i class="fas fa-truck text-blue-600 text-2xl marker"></i>
+                        </div>
+                        <div class="services__card__content df">
+                            <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;">Доставка по РФ</h3>
+                            <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Быстрая и надежная
+                                доставка в любой регион России.</p>
+                        </div>
+                    </div>
+                    <div class="services__card df">
+                        <div class="services__card__logo df">
+                            <i class="fas fa-headset text-blue-600 text-2xl marker"></i>
+                        </div>
+                        <div class="services__card__content df">
+                            <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;">Техническая поддержка</h3>
+                            <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Квалифицированные
+                                консультации по подбору и эксплуатации.</p>
+                        </div>
+                    </div>
+                    <div class="services__card df">
+                        <div class="services__card__logo df">
+                            <i class="fas fa-cogs text-blue-600 text-2xl marker"></i>
+                        </div>
+                        <div class="services__card__content df">
+                            <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;">Индивидуальные решения</h3>
+                            <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Разработка
+                                специальных
+                                решений под ваши задачи.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__reviews bg-white" id="reviews">
+            <div class="section__content df">
+                <div class="title__content">
+                    <h1 class="title__about">Отзывы наших клиентов </h1>
+                    <hr class="title__hr">
+                </div>
+
+            <div class="reviews_swiper swiper-container">
+                    <div class="swiper-wrapper df" id="swiper-wrapper">
+                        <div class="swiper-slide df" id="swiper__slide"></div>
+                    </div>
+                    <div class="swiper__pagination"></div>
+                </div>
+            </div> 
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
     </div>
-    <section class="section">
-        <div class="section__head">
-            <div class="section__head__content">
-                <p class="head__content__title">Профессиональные дизельные решения</p>
-                <p class="head__content__bottom">Лидер в производстве и поставке дизельных агрегатов и комплектующих</p>
-                <div class="head__content__btn">
-                    <a href="#products__section" class="content__left__btn">Наша продукция</a>
-                    <a href="#" class="content__right__btn">Связаться с нами</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="about__section section df" id="about__section">
-        <div class="section__content df">
-            <div class="title__content">
-                <h1 class="title__about">О компании RDI</h1>
-                <hr class="title__hr">
-            </div>
-            <div class="main__bottom__content df">
-                <div class="bottom__content__left df">
-                    <img src="./image/icon/icon.jpg" alt=""
-                        style="width: 100%; height: 100%; border-radius: 25px; object-fit: cover; ">
-                </div>
-                <div class="bottom__content__right df">
-                    <h3 class="fw-500" style="font-size: 1.5rem; height: 20px;">Наш опыт — ваша надежность</h3>
-                    <p class="fw-500 bg-gray lh-normal">Компания RDI уже более 15 лет является лидером в производстве и
-                        поставке дизельных агрегатов, топливной аппаратуры и комплектующих для промышленного и
-                        коммерческого транспорта.</p>
-                    <p class="fw-500 bg-gray lh-normal">Мы сочетаем передовые технологии с многолетним опытом, чтобы
-                        предложить нашим клиентам решения, которые действительно работают.</p>
-                    <div class="right__content__check df">
-                        <div class="left__check df">
-                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
-                                <span class="fw-500 bg-gray">Гарантия качества</span>
-                            </div>
-                            <div class="check df"><i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
-                                <span class="fw-500 bg-gray">Собственное производство</span>
-                            </div>
-                        </div>
-                        <div class="right__check df">
-                            <div class="check df">
-                                <i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
-                                <span class="fw-500 bg-gray">Сертифицированная продукция</span>
-                            </div>
-                            <div class="check df">
-                                <i class="fas fa-check-circle text-blue-600 mr-2 text-xl"></i>
-                                <span class="fw-500 bg-gray">Техническая поддержка</span>
-                            </div>
-                        </div>
+        </section>
+        <footer class="footer df" id="footer">
+            <div class="footer__content df">
+                <div class="left__content df">
+                    <div class="logo__content df">
+                        <i class="fas fa-oil-can text-blue-500 text-2xl"></i><span>RDI</span>
                     </div>
+                    <p>Профессиональные дизельные решения с 2008 года</p>
+                </div>
+                <div class="right__content df">
+                    <p>© 2023 RDI. Все права защищены.</p>
+                    <a href="#" style="color: #c0c0c0;">Политика конфиденциальности</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
-    <section class="section__product df bg-white" id="products__section">
-        <div class="section__content df">
-            <div class="title__content">
-                <h1 class="title__about">Наша продукция</h1>
-                <hr class="title__hr">
-            </div>
-            <div class="main__bottom__content df">
-                <div class="product__card df">
-                    <div class="card__image df">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="LOGO">
-                    </div>
-                    <div class="card__title df">
-                        <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
-                        <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей применения.</p>
-                        <a href="#" class="link">Подробнее →</a>
-                    </div>
-                </div>
-                <div class="product__card df">
-                    <div class="card__image df">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                            alt="LOGO">
-                    </div>
-                    <div class="card__title df">
-                        <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
-                        <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей применения.</p>
-                        <a href="#" class="link">Подробнее →</a>
-                    </div>
-                </div>
-                <div class="product__card df">
-                    <div class="card__image df">
-                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="LOGO">
-                    </div>
-                    <div class="card__title df">
-                        <h3 class="fw-600" style="font-size: 1.5rem; height: 10px;">Дизельные двигатели</h3>
-                        <p class="fw-500 bg-gray">Полный спектр дизельных двигателей для различных областей применения.</p>
-                        <a href="#" class="link">Подробнее →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom__btn__product df">
-                <form action="#">
-                    <button class="btn__product">Смотреть весь каталог</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    <section class="services df" id="services">
-        <div class="section__content df">
-            <div class="title__content">
-                <h1 class="title__about">Наша продукция</h1>
-                <hr class="title__hr">
-            </div>
-            <div class="services__content df">
-                <div class="services__card df">
-                    <div class="services__card__logo df">
-                        <i class="fas fa-tools text-blue-600 text-2xl marker"></i>
-                    </div>
-                    <div class="services__card__content df">
-                        <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;" >Ремонт и обслуживание</h3>
-                        <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Профессиональный ремонт дизельных двигателей любой сложности.</p>
-                    </div>
-                </div>
-                <div class="services__card df">
-                    <div class="services__card__logo df">
-                        <i class="fas fa-truck text-blue-600 text-2xl marker"></i>
-                    </div>
-                    <div class="services__card__content df">
-                        <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;" >Доставка по РФ</h3>
-                        <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Быстрая и надежная доставка в любой регион России.</p>
-                    </div>
-                </div>
-                <div class="services__card df">
-                    <div class="services__card__logo df">
-                        <i class="fas fa-headset text-blue-600 text-2xl marker"></i>
-                    </div>
-                    <div class="services__card__content df">
-                        <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;" >Техническая поддержка</h3>
-                        <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Квалифицированные консультации по подбору и эксплуатации.</p>
-                    </div>
-                </div>
-                <div class="services__card df">
-                    <div class="services__card__logo df">
-                        <i class="fas fa-cogs text-blue-600 text-2xl marker"></i>
-                    </div>
-                    <div class="services__card__content df">
-                        <h3 class="fw-600" style="font-size: 1.2rem; height: 10px;" >Индивидуальные решения</h3>
-                        <p class="fw-500 bg-gray" style="line-height: 20px; font-size: 1rem; ">Разработка специальных решений под ваши задачи.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/scripts/script.js"></script>
+    <script src="./src/components/reviews/data.js"></script>
     <script src="./src/scripts/app.js"></script>
+    <script src="./src/components/swiper/swiper.js"></script>
 </body>
 
 </html>
