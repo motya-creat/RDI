@@ -1,3 +1,6 @@
+@import '../components/swiper/swiper.css';
+@import '../components/swiper/swiperCard.css';
+
 html {
     scroll-behavior: smooth;
 }
@@ -500,51 +503,6 @@ button:hover {
     align-items: center;
 }
 
-/* END SECTION SERVICES */
-
-.card__reviews {
-    height: 150px;
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-}
-
-.card__reviews:hover {
-    transform: translateY(-5px);
-    border-bottom: 5px solid #b3b3b3;
-}
-.card__content {
-    height: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-.card__content__top {
-    gap: 20px;
-}
-
-.card__content__bottom {
-    width: 100%;
-    justify-content: left;
-    align-items: center;
-}
-
-.about__user{
-    align-items: start;
-    text-align: center;
-    justify-content: start;
-    flex-direction: column;
-}
-
-.image__user {
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #dbeafe;
-}
-
 /* FOOTER */
 
 .footer {
@@ -643,6 +601,11 @@ button:hover {
     @media (max-width: 420px) {
         .services__card {
             width: 80%;
+        }
+    }
+    @media (max-width: 458px) {
+        .swiper {
+            width: 100%;
         }
     }
 }

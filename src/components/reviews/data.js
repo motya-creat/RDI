@@ -9,4 +9,14 @@ const reviews = [
         position: 'Инженер-конструктор, Завод N',
         message: '"Хороший сервис!"'
     },
+    {
+        userName: 'курдык мурдык',
+        position: 'курдык мурдык',
+        message: '"курдык мурдык"'
+    },
+    {
+        userName: 'wegwewegwegew',
+        position: 'wegwewegwegew',
+        message: '"wegwewegwegew"'
+    },
 ];
