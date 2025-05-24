@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         </div>
                                         <div class="about__user df">
                                             <span class="fw-600" style="font-size: 1rem;">${review.userName}</span>
-                                            <p class="fw-500" style="font-size: .9rem;">${review.position}</p>
+                                            <p class="fw-500" style="font-size: .7rem;">${review.position}</p>
                                         </div>
                                     </div>
                                     <div class="card__content__bottom df">

@@ -588,6 +588,12 @@ button:hover {
         width: 100%;
     }
 
+    @media (max-width: 456px) {
+        .card__content__top {
+            flex-direction: column;
+        }
+    }
+
     @media (max-width: 361px) {
         .head__content__title {
             font-size: 1.4rem;

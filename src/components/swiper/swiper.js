@@ -1,5 +1,6 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
+    spaceBetween: 30,
     direction: 'horizontal',
     // loop: true,
 
