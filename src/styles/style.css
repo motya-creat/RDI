@@ -321,6 +321,10 @@ button:hover {
     width: 100%;
 }
 
+.section__reviews {
+    height: 500px;
+}
+
 .section__content {
     padding: 1rem 1rem 5rem 1rem;
     align-items: center;
@@ -412,6 +416,7 @@ button:hover {
 
 .product__card:hover {
     transition: .7s;
+    box-sizing:border-box;
     -webkit-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
