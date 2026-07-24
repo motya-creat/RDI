@@ -1,0 +1,187 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.form {
+  background: v.$white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: v.$shadow-md;
+
+  @include m.responsive(mobile) {
+    padding: 16px;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: v.$secondary;
+    margin-bottom: 12px;
+
+    @include m.responsive(mobile) {
+      font-size: 16px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: v.$light-gray;
+    }
+  }
+
+  &__step {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: v.$light-gray;
+    color: v.$text-secondary;
+    @include m.flex-center;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all v.$transition-fast;
+    flex-shrink: 0;
+
+    &--active {
+      background: v.$primary;
+      color: v.$white;
+      box-shadow: 0 4px 12px rgba(v.$primary, 0.3);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__stepContent {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: v.$secondary;
+    font-size: 14px;
+  }
+
+  &__required {
+    color: #EF4444;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    @include m.responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__option {
+    padding: 12px;
+    border: 2px solid v.$light-gray;
+    border-radius: 12px;
+    background: v.$white;
+    transition: all v.$transition-fast;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: v.$primary;
+    }
+
+    &--selected {
+      border-color: v.$primary;
+      background: rgba(v.$primary, 0.05);
+      color: v.$primary;
+    }
+
+    @include m.responsive(mobile) {
+      padding: 10px;
+      font-size: 13px;
+    }
+  }
+
+  &__input, &__textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid v.$light-gray;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all v.$transition-fast;
+
+    &:focus {
+      border-color: v.$primary;
+      box-shadow: 0 0 0 4px rgba(v.$primary, 0.1);
+    }
+
+    @include m.responsive(mobile) {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  &__error {
+    color: #EF4444;
+    font-size: 14px;
+    padding: 8px 12px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 8px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+
+    @include m.responsive(mobile) {
+      flex-direction: column;
+      
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__success {
+    text-align: center;
+    padding: 20px;
+  }
+
+  &__successIcon {
+    font-size: 48px;
+    margin-bottom: 12px;
+  }
+
+  &__successTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: v.$secondary;
+    margin-bottom: 8px;
+  }
+
+  &__successText {
+    color: v.$text-secondary;
+  }
+}

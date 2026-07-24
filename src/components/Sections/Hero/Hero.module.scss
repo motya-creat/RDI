@@ -1,0 +1,401 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 60px;
+  margin-top: -70px;
+  overflow: hidden;
+  background: url('../../../../public/images/hero/hero-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+  }
+
+  @include responsive(mobile) {
+    padding: 90px 0 40px;
+    min-height: auto;
+  }
+
+  @include responsive(mobile-sm) {
+    padding: 85px 0 35px;
+  }
+
+  @include responsive(mobile-xs) {
+    padding: 80px 0 30px;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(30, 144, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(30, 144, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    min-height: calc(100vh - 140px);
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      min-height: auto;
+      text-align: center;
+    }
+
+    @include responsive(mobile) {
+      gap: 30px;
+    }
+
+    @include responsive(mobile-sm) {
+      gap: 24px;
+    }
+
+    @include responsive(mobile-xs) {
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    @include responsive(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    background: rgba(30, 144, 255, 0.15);
+    // color: #1E90FF;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    letter-spacing: 0.5px;
+
+    @include responsive(mobile) {
+      font-size: 12px;
+      padding: 6px 16px;
+      margin-bottom: 18px;
+    }
+
+    @include responsive(mobile-sm) {
+      font-size: 11px;
+      padding: 5px 14px;
+      margin-bottom: 14px;
+    }
+
+    @include responsive(mobile-xs) {
+      font-size: 10px;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    font-size: 52px;
+    line-height: 1.1;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 20px;
+
+    @include responsive(tablet) {
+      font-size: 38px;
+    }
+
+    @include responsive(mobile) {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    @include responsive(mobile-sm) {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    @include responsive(mobile-xs) {
+      font-size: 20px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+  }
+
+  &__highlight {
+    background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 50%, #87CEFA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 50%, #87CEFA 100%);
+      border-radius: 2px;
+
+      @include responsive(tablet) {
+        left: 50%;
+        right: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+      }
+
+      @include responsive(mobile) {
+        width: 70%;
+        height: 2px;
+        bottom: -3px;
+      }
+
+      @include responsive(mobile-sm) {
+        width: 80%;
+        height: 2px;
+        bottom: -2px;
+      }
+
+      @include responsive(mobile-xs) {
+        width: 90%;
+        height: 2px;
+        bottom: -2px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 500px;
+
+    @include responsive(tablet) {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+    }
+
+    @include responsive(mobile) {
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    @include responsive(mobile-sm) {
+      font-size: 14px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    @include responsive(mobile-xs) {
+      font-size: 13px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    @include responsive(tablet) {
+      justify-content: center;
+    }
+
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    @include responsive(mobile-sm) {
+      gap: 14px;
+    }
+
+    @include responsive(mobile-xs) {
+      gap: 12px;
+    }
+  }
+
+  &__button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 16px 32px !important;
+    font-size: 18px !important;
+    background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 100%) !important;
+    box-shadow: 0 10px 30px rgba(30, 144, 255, 0.3);
+    transition: all 0.3s ease !important;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(30, 144, 255, 0.4);
+      background: linear-gradient(135deg, #1873CC 0%, #0099CC 100%) !important;
+    }
+
+    @include responsive(mobile) {
+      width: 100% !important;
+      justify-content: center !important;
+      padding: 14px 24px !important;
+      font-size: 16px !important;
+    }
+
+    @include responsive(mobile-sm) {
+      padding: 12px 20px !important;
+      font-size: 14px !important;
+      gap: 10px !important;
+    }
+
+    @include responsive(mobile-xs) {
+      padding: 10px 16px !important;
+      font-size: 13px !important;
+      gap: 8px !important;
+      border-radius: 10px !important;
+    }
+
+    svg {
+      animation: pulse 2s ease-in-out infinite;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      @include responsive(mobile-sm) {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include responsive(mobile-xs) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    text-decoration: none;
+
+    @include responsive(mobile) {
+      align-items: center;
+    }
+  }
+
+  &__phoneLabel {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 400;
+
+    @include responsive(mobile-sm) {
+      font-size: 12px;
+    }
+
+    @include responsive(mobile-xs) {
+      font-size: 11px;
+    }
+  }
+
+  &__phoneNumber {
+    font-size: 24px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #1E90FF;
+    }
+
+    @include responsive(mobile) {
+      font-size: 20px;
+    }
+
+    @include responsive(mobile-sm) {
+      font-size: 18px;
+    }
+
+    @include responsive(mobile-xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  &__carContent {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    min-width: 280px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(30, 144, 255, 0.3);
+    }
+  }
+
+  &__carIcon {
+    font-size: 100px;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.8;
+  }
+
+  &__carName {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  &__carSub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-top: 4px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

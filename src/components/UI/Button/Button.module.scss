@@ -1,0 +1,50 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all v.$transition-fast;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  &--primary {
+    background: v.$primary;
+    color: v.$white;
+
+    &:hover {
+      background: v.$primary-dark;
+      transform: translateY(-2px);
+      box-shadow: v.$shadow-lg;
+    }
+  }
+
+  &--secondary {
+    background: v.$light-gray;
+    color: v.$secondary;
+
+    &:hover {
+      background: darken(v.$light-gray, 5%);
+    }
+  }
+
+  &--small {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  &--medium {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  &--large {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+}

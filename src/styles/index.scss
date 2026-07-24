@@ -1,0 +1,70 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-primary;
+  background-color: $white;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include responsive(mobile) {
+    padding: 0 16px;
+  }
+  
+  @include responsive(mobile-sm) {
+    padding: 0 12px;
+  }
+  
+  @include responsive(mobile-xs) {
+    padding: 0 10px;
+  }
+}
+
+.section-padding {
+  padding: 80px 0;
+  
+  @include responsive(mobile) {
+    padding: 50px 0;
+  }
+}
